@@ -34,4 +34,8 @@ rcadd                   sshd       default
 rcadd                   syslog-ng  default
 rcadd                   acpid      default
 
+post_install_extra_packages() {
+  #install chef client
+  wget -qO - https://raw.githubusercontent.com/laboshinl/gentoostack/master/chef-omnibus.sh | bash
+}
 
